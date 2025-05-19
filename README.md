@@ -40,25 +40,47 @@ https://learn.microsoft.com/en-us/sysinternals/downloads/psexec
 Extract the ZIP and place `PsExec.exe` somewhere accessible (e.g. `C:\Tools\`).
 
 ---
-### 1.5 Find Your Device's MAC Address
+### 1.3 Find Your Adapter and Device MAC Addresses
 
-To identify which folder belongs to your Bluetooth device, you need its MAC address.
+To extract the Bluetooth pairing key, you need:
 
-1. Press `Win + X` → open **Terminal (Admin)** or **Command Prompt (Admin)**
+- The **MAC address of your Bluetooth adapter** (your PC's built-in or USB Bluetooth)
+- The **MAC address of your Bluetooth device** (e.g. headphones)
+
+#### A. Get the Adapter MAC
+
+1. Press `Win + X` → open **Terminal (Admin)**
 2. Run this command:
-
 ```
 getmac /v /fo list
 ```
+Look for the Bluetooth adapter and note its **Physical Address**, e.g.:
+```
+Connection Name:  Bluetooth Network Connection
+Network Adapter:  Bluetooth Device (Personal Area Network)
+Physical Address: 12-34-56-78-9A-BC
+```
+Keep record of this
 
-Alternatively, for more detailed Bluetooth info, run:
 
+#### B. Get the Device MAC
+Still in Terminal, run:
 ```
 Get-PnpDevice -Class Bluetooth | Select-Object Name,InstanceId
 ```
-
 Look for your device's name (e.g. "Bluetooth mouse", "Sony WH-1000XM5", etc.).  
 Its MAC address will appear at the end of the `InstanceId`.
+
+Example output for device named MyBluetoothDevice:
+
+```
+Name                             InstanceId
+----                             ----------
+MyBluetoothDevice                BTHENUM\DEV_112233445566\8&ABCDEF&0&BLUETOOTHDEVICE_112233445566
+MyBluetoothDevice Avrcp Transport BTHENUM\{1111110C-1100-1000-8110-11305A4B31BA}_VID&0001AAAA_PID&1234\8&ABCDEF&0&...
+LE-MyBluetoothDevice             BTHLE\DEV_112233445566\8&12345678&0&112233445566
+```
+
 
 ---
 
