@@ -1,4 +1,4 @@
-# Dual-Boot Bluetooth Headphone Auto-Connect (Windows + Linux)
+# Dual-Boot Bluetooth Headphone Auto-Connect (Windows + Linux) Guide
 
 Dual-booting Windows and Linux causes and issue with Bluetooth devices, causing them to lose their pairing between systems. This means you have to remove and re-pair the device each time you switch operating systems.
 
@@ -93,9 +93,9 @@ Note the device MAC address, In this case, the MAC address is 11:22:33:44:55:66.
 
 ---
 
-### 1.3 Launch Regedit as SYSTEM
+### 1.4 Launch Regedit as SYSTEM
 
-Open **Command Prompt as Administrator**, then run:
+In terminal run:
 
 ```
 C:\Tools\PsExec.exe -i -s regedit.exe
@@ -104,7 +104,7 @@ C:\Tools\PsExec.exe -i -s regedit.exe
 This opens the Registry Editor as the SYSTEM user.
 
 ---
-### 1.4 Locate the Key
+### 1.5 Locate the Key
 
 In Registry Editor, navigate to (You can copy paste into the address bar at the top of the Registry Editor):
 ```
