@@ -104,10 +104,29 @@ C:\Tools\PsExec.exe -i -s regedit.exe
 This opens the Registry Editor as the SYSTEM user.
 
 ---
-### 1.5 Locate the Key
+### 1.5 Locate the Link key
 
 In Registry Editor, navigate to (You can copy paste into the address bar at the top of the Registry Editor):
 ```
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\BTHPORT\Parameters\Keys
 ```
+Find the folder that matches your adapter’s physical address.
+For example, if your adapter MAC is `12-34-56-78-9A-BC`, the folder name will be:
+```
+123456789abc
+```
+
+Inside that folder you will see a `REG_BINARY`  value whose name matches your Bluetooth device’s MAC address.
+For example For `11:22:33:44:55:66` will appear as:
+```
+112233445566
+```
+Its data will look something like this:
+
+```
+8a 1f b3 92 4d c7 5a 33 19 ee 84 7b 00 af 61 d2
+```
+
+This is the link key we’re after, you’ll need to copy this value for use in Linux.
+
 
