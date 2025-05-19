@@ -10,14 +10,14 @@ Tested on:
 - **Windows 11 24H2**
 - **Linux Mint 22.1**
 
-This should work on most linux distributions 
+This should work on most linux distributions.
 
 ## Before You Start
 Make sure the Bluetooth device has been paired at least once in Linux.
   
 ## Step 1: Extract the Bluetooth Pairing Key from Windows
 
-To allow Bluetooth devices to connect seamlessly across dual boot, we need to copy the pairing key (called the **link key**) from Windows to Linux. This allows Linux to recognize and trust the device without needing to re-pair.
+To allow Bluetooth devices to connect seamlessly across dual boot, we need to copy the **link key** from Windows to Linux. This allows Linux to recognize and trust the device without needing to re-pair.
 
 ---
 
