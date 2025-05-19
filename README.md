@@ -52,5 +52,10 @@ C:\Tools\PsExec.exe -i -s regedit.exe
 This opens the Registry Editor as the SYSTEM user.
 
 ---
+### 1.4 Locate the Key
 
+In Registry Editor, navigate to (You can copy paste into the address bar at the top of the Registry Editor):
 ```
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\BTHPORT\Parameters\Keys
+```
+
