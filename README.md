@@ -98,7 +98,7 @@ Note the device MAC address, In this case, the MAC address is `11:22:33:44:55:66
 
 ### 1.4 Launch Regedit as SYSTEM
 
-In terminal run:
+In terminal run (change according to PsExec location):
 
 ```
 C:\Tools\PsExec.exe -i -s regedit.exe
