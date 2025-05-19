@@ -54,13 +54,14 @@ To extract the Bluetooth pairing key, you need:
 ```
 getmac /v /fo list
 ```
-Look for the Bluetooth adapter and note its **Physical Address**, e.g.:
+Look for the Bluetooth adapter e.g.:
 ```
 Connection Name:  Bluetooth Network Connection
 Network Adapter:  Bluetooth Device (Personal Area Network)
 Physical Address: 12-34-56-78-9A-BC
 ```
-Keep record of this
+and note its **Physical Address**
+(Physical Address: 12-34-56-78-9A-BC)
 
 
 #### B. Get the Device MAC
@@ -80,6 +81,17 @@ MyBluetoothDevice                BTHENUM\DEV_112233445566\8&ABCDEF&0&BLUETOOTHDE
 MyBluetoothDevice Avrcp Transport BTHENUM\{1111110C-1100-1000-8110-11305A4B31BA}_VID&0001AAAA_PID&1234\8&ABCDEF&0&...
 LE-MyBluetoothDevice             BTHLE\DEV_112233445566\8&12345678&0&112233445566
 ```
+The MAC address is present after DEV_ and after BLUETOOTHDEVICE
+So in this example we will choose the main device
+```
+BTHENUM\DEV_112233445566\8&ABCDEF&0&BLUETOOTHDEVICE_112233445566
+```
+See 
+```
+DEV_112233445566
+BLUETOOTHDEVICE_112233445566
+```
+And keep record of the MAC address 11:22:33:44:55:66
 
 
 ---
