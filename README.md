@@ -40,6 +40,27 @@ https://learn.microsoft.com/en-us/sysinternals/downloads/psexec
 Extract the ZIP and place `PsExec.exe` somewhere accessible (e.g. `C:\Tools\`).
 
 ---
+### 1.5 Find Your Device's MAC Address
+
+To identify which folder belongs to your Bluetooth device, you need its MAC address.
+
+1. Press `Win + X` → open **Terminal (Admin)** or **Command Prompt (Admin)**
+2. Run this command:
+
+```
+getmac /v /fo list
+```
+
+Alternatively, for more detailed Bluetooth info, run:
+
+```
+Get-PnpDevice -Class Bluetooth | Select-Object Name,InstanceId
+```
+
+Look for your device's name (e.g. "Bluetooth mouse", "Sony WH-1000XM5", etc.).  
+Its MAC address will appear at the end of the `InstanceId`.
+
+---
 
 ### 1.3 Launch Regedit as SYSTEM
 
