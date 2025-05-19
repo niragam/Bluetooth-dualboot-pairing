@@ -11,6 +11,9 @@ Tested on:
 - **Linux Mint 22.1**
 
 This should work on most linux distributions 
+
+## Before You Start
+Make sure the Bluetooth device has been paired at least once in Linux.
   
 ## Step 1: Extract the Bluetooth Pairing Key from Windows
 
