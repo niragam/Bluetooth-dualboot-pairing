@@ -41,4 +41,16 @@ Extract the ZIP and place `PsExec.exe` somewhere accessible (e.g. `C:\Tools\`).
 
 ---
 
+### 1.3 Launch Regedit as SYSTEM
+
+Open **Command Prompt as Administrator**, then run:
+
+```
+C:\Tools\PsExec.exe -i -s regedit.exe
+```
+
+This opens the Registry Editor as the SYSTEM user.
+
+---
+
 ```
