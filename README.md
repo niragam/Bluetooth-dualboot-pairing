@@ -60,19 +60,17 @@ Connection Name:  Bluetooth Network Connection
 Network Adapter:  Bluetooth Device (Personal Area Network)
 Physical Address: 12-34-56-78-9A-BC
 ```
-and note its **Physical Address**
-(Physical Address: 12-34-56-78-9A-BC)
+Note its **Physical Address** - in this case: 12-34-56-78-9A-BC
 
 
-#### B. Get the Device MAC
-Still in Terminal, run:
+#### B. Get the Device MAC address
+Still in the Terminal, run:
 ```
 Get-PnpDevice -Class Bluetooth | Select-Object Name,InstanceId
 ```
 Look for your device's name (e.g. "Bluetooth mouse", "Sony WH-1000XM5", etc.).  
-Its MAC address will appear at the end of the `InstanceId`.
 
-Example output for device named MyBluetoothDevice:
+Example output for device called MyBluetoothDevice:
 
 ```
 Name                             InstanceId
@@ -81,17 +79,16 @@ MyBluetoothDevice                BTHENUM\DEV_112233445566\8&ABCDEF&0&BLUETOOTHDE
 MyBluetoothDevice Avrcp Transport BTHENUM\{1111110C-1100-1000-8110-11305A4B31BA}_VID&0001AAAA_PID&1234\8&ABCDEF&0&...
 LE-MyBluetoothDevice             BTHLE\DEV_112233445566\8&12345678&0&112233445566
 ```
-The MAC address is present after DEV_ and after BLUETOOTHDEVICE
-So in this example we will choose the main device
+Choose the entry that matches just the device name, This is the main pairing entry.
 ```
-BTHENUM\DEV_112233445566\8&ABCDEF&0&BLUETOOTHDEVICE_112233445566
+MyBluetoothDevice                BTHENUM\DEV_112233445566\8&ABCDEF&0&BLUETOOTHDEVICE_112233445566
 ```
-See 
+You'll see the MAC address in two places in each InstanceId:
 ```
 DEV_112233445566
 BLUETOOTHDEVICE_112233445566
 ```
-And keep record of the MAC address 11:22:33:44:55:66
+Note the device MAC address, In this case, the MAC address is 11:22:33:44:55:66.
 
 
 ---
