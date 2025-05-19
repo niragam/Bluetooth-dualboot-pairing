@@ -28,8 +28,11 @@ First, make sure your headphones are **fully paired and connected** in Windows.
 
 You can verify the connection from PowerShell:
 
-'''powershell
+```powershell
 Get-PnpDevice -FriendlyName "*headphone*" | Format-List
-'''
+```
 
 Example output:
+```
+
+```
