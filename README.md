@@ -63,7 +63,7 @@ Connection Name:  Bluetooth Network Connection
 Network Adapter:  Bluetooth Device (Personal Area Network)
 Physical Address: 12-34-56-78-9A-BC
 ```
-Note its **Physical Address** - in this case: 12-34-56-78-9A-BC
+Note its **Physical Address** - in this case: `12-34-56-78-9A-BC`
 
 
 #### B. Get the Device MAC address
@@ -91,7 +91,7 @@ You'll see the MAC address in two places in each InstanceId:
 DEV_112233445566
 BLUETOOTHDEVICE_112233445566
 ```
-Note the device MAC address, In this case, the MAC address is 11:22:33:44:55:66.
+Note the device MAC address, In this case, the MAC address is `11:22:33:44:55:66`.
 
 
 ---
