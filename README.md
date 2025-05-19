@@ -1,6 +1,6 @@
 # Dual-Boot Bluetooth Headphone Auto-Connect (Windows + Linux)
 
-Dual-booting Windows and Linux causes Bluetooth devices to lose their pairing between systems. This typically means you have to remove and re-pair the device each time you switch operating systems.
+Dual-booting Windows and Linux causes and issue with Bluetooth devices, causing them to lose their pairing between systems. This means you have to remove and re-pair the device each time you switch operating systems.
 
 This guide aims to fix that issue by making your Bluetooth device connect automatically in both systems, without needing to re-pair every time you reboot.
 
@@ -10,4 +10,26 @@ Tested on:
 - **Windows 11 24H2**
 - **Linux Mint 22.1**
 
+This should work on most linux distributions 
+  
+## Step 1: Extract the Bluetooth Pairing Key from Windows
 
+To allow Bluetooth devices to connect seamlessly across dual boot, we need to copy the pairing key (called the **link key**) from Windows to Linux. This allows Linux to recognize and trust the device without needing to re-pair.
+
+---
+
+### 1.1 Pair the Bluetooth Headphones in Windows
+
+First, make sure your headphones are **fully paired and connected** in Windows.
+
+1. Open **Settings** → **Bluetooth & devices**
+2. Click **Add device** → Select **Bluetooth**
+3. Put your headphones in pairing mode, select them, and wait until they show as **connected**
+
+You can verify the connection from PowerShell:
+
+'''powershell
+Get-PnpDevice -FriendlyName "*headphone*" | Format-List
+'''
+
+Example output:
