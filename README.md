@@ -1,6 +1,8 @@
 # Dual-Boot Bluetooth Headphone Auto-Connect (Windows + Linux)
 
-This guide walks you through setting up Bluetooth headphones so they automatically connect in both Windows and Linux with high-quality audio, without needing to re-pair on each reboot.
+Dual-booting Windows and Linux often causes Bluetooth devices to lose their pairing between systems. This typically means you have to remove and re-pair the device each time you switch operating systems.
+
+This guide aims to fix that issue by making your Bluetooth device connect automatically in both systems, without needing to re-pair every time you reboot.
 
 This guide will **synchronize the trust and key info** between systems and optionally **force A2DP (high-quality audio)** without fallback to HSP/HFP (low-quality mic mode).
 
