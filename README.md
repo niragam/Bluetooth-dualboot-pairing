@@ -1,6 +1,6 @@
 # Dual-Boot Bluetooth Headphone Auto-Connect (Windows + Linux) Guide
 
-Dual-booting Windows and Linux causes and issue with Bluetooth devices, causing them to lose their pairing between systems. This means you have to remove and re-pair the device each time you switch operating systems.
+Dual-booting Windows and Linux causes an issue with Bluetooth devices, causing them to lose their pairing between systems. This means you have to remove and re-pair the device each time you switch operating systems.
 
 This guide aims to fix that issue by making your Bluetooth device connect automatically in both systems, without needing to re-pair every time you reboot.
 
