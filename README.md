@@ -26,13 +26,19 @@ First, make sure your headphones are **fully paired and connected** in Windows.
 2. Click **Add device** → Select **Bluetooth**
 3. Put your headphones in pairing mode, select them, and wait until they show as **connected**
 
-You can verify the connection from PowerShell:
+After pairing, Windows stores the device’s encryption key (called the “link key”) in the registry.
 
-```powershell
-Get-PnpDevice -FriendlyName "*headphone*" | Format-List
-```
+---
 
-Example output:
-```
+### 1.2 Download PsExec (Required to Read the Key)
+
+To view the Bluetooth keys, you need to run `regedit.exe` as the **SYSTEM** user.
+
+Download **PsExec** from Microsoft’s official Sysinternals page:  
+https://learn.microsoft.com/en-us/sysinternals/downloads/psexec
+
+Extract the ZIP and place `PsExec.exe` somewhere accessible (e.g. `C:\Tools\`).
+
+---
 
 ```
