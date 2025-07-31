@@ -40,15 +40,15 @@ To view the Bluetooth keys, you need to run `regedit.exe` as the **SYSTEM** user
 Download **PsExec** from Microsoft’s official Sysinternals page:  
 https://learn.microsoft.com/en-us/sysinternals/downloads/psexec
 
-Extract the ZIP and place `PsExec.exe` somewhere accessible (e.g. `C:\Tools\`).
+Extract the ZIP and place `PsExec.exe` somewhere accessible like on desktop.
 
 ---
 ### 1.3 Find Your Adapter and Device MAC Addresses
 
 To extract the Bluetooth pairing key, you need:
 
-- The **MAC address of your Bluetooth adapter** (your PC's built-in or USB Bluetooth)
-- The **MAC address of your Bluetooth device** (e.g. headphones)
+- The **MAC address of your Bluetooth adapter** 
+- The **MAC address of your Bluetooth device** (e.g. headphones, keyboard, mouse, etc.)
 
 #### A. Get the Adapter MAC
 
@@ -63,7 +63,7 @@ Connection Name:  Bluetooth Network Connection
 Network Adapter:  Bluetooth Device (Personal Area Network)
 Physical Address: 12-34-56-78-9A-BC
 ```
-Note its **Physical Address** - in this case: `12-34-56-78-9A-BC`
+Save its **Physical Address** - in this case: `12-34-56-78-9A-BC`
 
 
 #### B. Get the Device MAC address
@@ -91,7 +91,7 @@ You'll see the MAC address in two places in each InstanceId:
 DEV_112233445566
 BLUETOOTHDEVICE_112233445566
 ```
-Note the device MAC address, In this case, the MAC address is `11:22:33:44:55:66`.
+Save the device MAC address, In this case, the MAC address is `11:22:33:44:55:66`.
 
 
 ---
@@ -101,7 +101,7 @@ Note the device MAC address, In this case, the MAC address is `11:22:33:44:55:66
 In terminal run (change according to PsExec location):
 
 ```
-C:\Tools\PsExec.exe -i -s regedit.exe
+.\desktop\PsExec.exe -i -s regedit.exe
 ```
 
 This opens the Registry Editor as the SYSTEM user.
